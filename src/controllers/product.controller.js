@@ -42,7 +42,7 @@ ctrlProduct.getProducts = async (req, res) => {
 
 ctrlProduct.getProductsByCategoria = async (req, res) => {
     const categoria = req.params.name_categoria;
-    console.log(categoria);
+    // console.log(categoria);
     try {
         const products = await Producto.find( {categoria: categoria, isActive: true } )
         .populate('idComercio')        
